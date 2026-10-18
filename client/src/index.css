@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFFAF5;
+    color: #202020;
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom scrollbar in maximalist orange & charcoal */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0E5;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border: 2px solid #202020;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D94B00;
+}
+
+/* Brutalist card styling */
+.brutal-card {
+  background: #FFFFFF;
+  border: 2px solid #202020;
+  box-shadow: 4px 4px 0px 0px #202020;
+  transition: all 0.15s ease-in-out;
+}
+.brutal-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #202020;
+}
+
+.brutal-card-orange {
+  background: #FFFFFF;
+  border: 2px solid #FF6B00;
+  box-shadow: 4px 4px 0px 0px #FF6B00;
+  transition: all 0.15s ease-in-out;
+}
+.brutal-card-orange:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #FF6B00;
+}
+
+/* High-contrast brutalist buttons */
+.brutal-btn-primary {
+  background: #FF6B00;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: 2px solid #202020;
+  box-shadow: 3px 3px 0px 0px #202020;
+  transition: all 0.12s ease-in-out;
+}
+.brutal-btn-primary:hover {
+  background: #D94B00;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px 0px #202020;
+}
+.brutal-btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #202020;
+}
+
+.brutal-btn-secondary {
+  background: #FFFFFF;
+  color: #202020;
+  font-weight: 700;
+  border: 2px solid #202020;
+  box-shadow: 3px 3px 0px 0px #202020;
+  transition: all 0.12s ease-in-out;
+}
+.brutal-btn-secondary:hover {
+  background: #FFF0E5;
+  color: #FF6B00;
+  border-color: #FF6B00;
+  box-shadow: 5px 5px 0px 0px #FF6B00;
+  transform: translate(-1px, -1px);
+}
+.brutal-btn-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #202020;
+}
+
+/* Pulse animation for security status */
+@keyframes pulse-orange {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+.animate-pulse-orange {
+  animation: pulse-orange 2s infinite ease-in-out;
+}
